@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { createStore } from './reducers';
+import { createStore } from 'redux';
 import allReducers  from './reducers' //no need to write index.js as webpack will take care for index.js name
 
 const store = createStore(

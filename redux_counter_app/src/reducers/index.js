@@ -4,7 +4,7 @@ import { combineReducers} from 'redux';
 
 //creating a main reducers for all reducers by cobinning them.
 
-const allReducers = combineReducer({
+const allReducers = combineReducers({
     counter : counterReducer, //so there counterReducer give value from reducer function . and counter will be our state.
     isLogged : loggedinreducer
 });
