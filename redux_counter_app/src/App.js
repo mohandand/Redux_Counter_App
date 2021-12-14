@@ -1,13 +1,15 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
-
+import { useSelector, useDispatch } from 'react-redux';
+import { increment,decrement } from './actions' //no need to add index as webpack take care of it.
 
 function App() {
   const counter = useSelector(state => state.counter)
+  const dispatch = useDispatch();
   return (
     <div className="App">
       <h1>Counter {counter}</h1>
-      <button>+</button>
+      <button onClick = {() => dispatch(increment())}>+</button>
+    <button onClick = {() => dispatch(decrement())}>-</button>
     </div>
   );
 }
